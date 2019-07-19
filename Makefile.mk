@@ -1,5 +1,14 @@
+CC=g++
+RM=rm
+MV=mv
+CD=cd
+CP=cp
+AR=ar
+STRIP=strip
+INC=-I./include
+
 TARGET_DIR =./_install
-TARGET   = leet
+TARGET   = leet_main
 
 CXXFLAGS += -Wall -DDEBUG $(INC)
 
@@ -13,7 +22,8 @@ endif
 OPath=$(PRO_DIR)/.obj
 
 # all object files.
-OBJ=$(OPath)/main.o $(OPath)/version.o 
+OBJ=$(OPath)/leet_main.o 
+#$(OPath)/version.o 
 
 sub_dirs=$(PRO_DIR)/ArrayClassify $(PRO_DIR)/DPClassify  $(PRO_DIR)/ListClassify   $(PRO_DIR)/StringClassify  $(PRO_DIR)/TreeClassify  
 #sub_dirs=$(PRO_DIR)
