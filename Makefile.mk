@@ -5,12 +5,12 @@ CD=cd
 CP=cp
 AR=ar
 STRIP=strip
-INC=-I./include
+INC=-I./include -I./tool
 
 TARGET_DIR =./_install
 TARGET   = leet_main
 
-CXXFLAGS += -Wall -DDEBUG $(INC)
+CXXFLAGS += -Wall -std=c++11 -DDEBUG $(INC)
 
 LDFLAGS += -luuid -lrt 
 
@@ -25,9 +25,11 @@ OPath=$(PRO_DIR)/.obj
 OBJ=$(OPath)/leet_main.o 
 #$(OPath)/version.o 
 
-sub_dirs=$(PRO_DIR)/ArrayClassify $(PRO_DIR)/DPClassify  $(PRO_DIR)/ListClassify   $(PRO_DIR)/StringClassify  $(PRO_DIR)/TreeClassify  
+sub_dirs=$(PRO_DIR)/tool  $(PRO_DIR)/StringClassify 
+#
 #sub_dirs=$(PRO_DIR)
-
+#$(PRO_DIR)/ArrayClassify $(PRO_DIR)/DPClassify  $(PRO_DIR)/ListClassify 
+ #$(PRO_DIR)/TreeClassify  
 LIBS=
 LIBS=$(shell libs=;for subdir in $(sub_dirs);do libs+="$$subdir/build-in.o ";done;echo $$libs;)
 
@@ -80,4 +82,10 @@ clean_obj:
 	done
 	$(RM) -f $(OBJ) >& /dev/null
 
-
+export CC
+export RM=rm
+export MV=mv
+export CD=cd
+export CP=cp
+export AR=ar
+export STRIP=strip

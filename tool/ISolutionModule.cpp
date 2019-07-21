@@ -17,13 +17,22 @@ void ISolutionModule::ShowAllSolutions()
     int cnt = 1;
     for (auto &info : solutions)
     {
-        std::cout << cnt << " " << info->name <<" " << info->level << std::endl;
+        info->problemInfo();
         ++cnt;
     }
     
 }
-
-void ISolutionModule::RegisterSoulution(Option *option)
+void ISolutionModule::ShowAnswer(int idx)
 {
-    solutions.push_back(option);
+    if(idx < 0 || idx >=  (int) solutions.size())
+    {
+        std::cout << "No Question " << idx << " Check Your Input." << std::endl;
+        return;
+    }
+    solutions[idx]->answer();
+}
+
+void ISolutionModule::RegisterSoulution(ISolutionBase *solution)
+{
+    if(solution) solutions.push_back(solution);
 }

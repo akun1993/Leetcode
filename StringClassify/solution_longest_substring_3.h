@@ -3,7 +3,8 @@
 
 #include <string>
 #include <iostream>
-
+#include <my_types.h>
+#include <ISolutionBase.h>
 // 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
 // 示例 1:
@@ -32,7 +33,8 @@
 // 如果下一个字符在sum[256]中有记录，则说明如果添加这个字符，会使结果字符串中出现重复的字符，所以要更新
 // 当前的begin 值，找到那个字符，并从之后的那个字符开始计算begin，同时更新最长的无重复字符串的长度。
 
-class SolutionLongestSubstring {
+class SolutionLongestSubstring : public ISolutionBase
+{
 public:
     int lengthOfLongestSubstring(std::string s) {
         

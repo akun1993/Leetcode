@@ -1,5 +1,5 @@
 
-INC=-I../include
+INC=-I../include -I../tool
 CXXFLAGS += -Wall -std=c++11 -DDEBUG $(INC)
 
 TARGET=build-in.o
@@ -11,18 +11,20 @@ endif
 
 Opath=$(PRO_DIR)
 
-OBJ=solution_strings.o
+OBJ= $(patsubst %.cpp,%.o,$(wildcard *.cpp))
+
+#	echo $(OBJ)
 
 LIB=$(shell  libs=; for subdir in $(SUBDIRS); do libs+=$$(subdir)/build-in.o; done; echo $$libs)
 
-$(TARGET):
-	$(AR) -r $(TARGET) $(OBJ) $(LIB)
+$(TARGET): $(OBJ)
+	$(AR) -r -c $(TARGET) $(OBJ) $(LIB)
 
 $(OPath)/%.o: %.cpp
 	$(CC) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) -rf $(Opath)/*.o >& /dev/null;
+	$(RM) -f $(Opath)/*.o >& /dev/null;
 
 	@for subdir in $(SUBDIRS);\
 	do\

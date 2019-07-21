@@ -2,22 +2,21 @@
 #define _I_SOLUTION_MODULE_H_
 
 #include <vector>
-#include "option.h"
+#include "ISolutionBase.h"
 
 class ISolutionModule
 {
 private:
-    
-
-    std::vector<Option *> solutions;
-
+    std::vector<ISolutionBase *> solutions;
 public:
     ISolutionModule(/* args */);
     virtual ~ISolutionModule();
 
+    void ShowAnswer(int idx);
+
     virtual void ShowAllSolutions();
 
-    virtual void RegisterSoulution(Option *option);
+    virtual void RegisterSoulution(ISolutionBase *solution);
 };
 
 #endif

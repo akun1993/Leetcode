@@ -3,7 +3,8 @@
 
 #include <vector>
 #include <string>
-
+#include <my_types.h>
+#include <ISolutionBase.h>
 using namespace std;
 
 // 给出 n 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且有效的括号组合。
@@ -22,7 +23,7 @@ using namespace std;
 // '(' 的数量一定大于等于')'的数量，所以第一个肯定是'(',
 // 结束条件是'('的数量达到要求。
 
-class SolutionGenerateBracket
+class SolutionGenerateBracket : public ISolutionBase
 {
 public:
 

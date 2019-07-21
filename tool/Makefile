@@ -16,13 +16,13 @@ OBJ=$(Opath)/ISolutionModule.o
 LIB=$(shell  libs=; for subdir in $(SUBDIRS); do libs+=$$(subdir)/build-in.o; done; echo $$libs)
 
 $(TARGET): $(OBJ)
-	$(AR) -r $(TARGET) $(OBJ) $(LIB)
+	$(AR) -r -c $(TARGET) $(OBJ) $(LIB)
 
 $(OPath)/%.o: %.cpp
 	$(CC) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) -rf $(Opath)/*.o >& /dev/null;
+	$(RM) -f $(Opath)/*.o >& /dev/null;
 
 	@for subdir in $(SUBDIRS);\
 	do\

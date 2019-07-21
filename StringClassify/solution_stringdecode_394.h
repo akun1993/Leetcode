@@ -3,7 +3,8 @@
 
 #include <string>
 #include <iostream>
-
+#include <my_types.h>
+#include <ISolutionBase.h>
 using namespace std;
 // 给定一个经过编码的字符串，返回它解码后的字符串。
 
@@ -26,7 +27,8 @@ using namespace std;
 //解法 ：使用递归， 本题解码同样涉及到括号匹配的问题，解码时最主要的是注意嵌套，也就是 '[' 开始 和 ']' 结束，必须对应匹配
 // 其内部嵌套的'['']' 
 
-class SolutionStringDecode {
+class SolutionStringDecode :  public ISolutionBase
+{
 public:
     
     void __decode(string &s,int beg,int &end,int &breaket,string &str)

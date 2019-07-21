@@ -7,6 +7,8 @@
 #include <vector>
 #include <string>
 #include <deque>
+#include <my_types.h>
+#include <ISolutionBase.h>
 using namespace std;
 
 // 给定一个非空字符串 s 和一个包含非空单词列表的字典 wordDict，判定 s 是否可以被空格拆分为一个或多个在字典中出现的单词。
@@ -37,7 +39,7 @@ using namespace std;
 // 解法2：广度优先搜索，首先将从0开始将到j（j >= 0  && j < s.size()） 结束的所有在字典中的单词,加入队列
 // 队列中存储的是结束的索引，然后取出队列中的元素也就是索引，从该索引再次进行搜索，直到队列为空，或找到结果。
 
-class SolutionWordBreak
+class SolutionWordBreak: public ISolutioBase
 {
 private:
     /* data */

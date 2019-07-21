@@ -1,7 +1,8 @@
 #ifndef _SOLUTION_STRINGS_H_
 #define _SOLUTION_STRINGS_H_
 
-#include "../tool/ISolutionModule.h"
+#include <ISolutionModule.h>
+#include "solution_stringexist_79.h"
 
 class SolutionStrings:public ISolutionModule
 {
@@ -12,10 +13,11 @@ public:
     static SolutionStrings &GetInstance()
     {
         static SolutionStrings instance;
+        string_exist.answer();
         return instance;
     }
     ~SolutionStrings();
-    
+
 };
 
 #endif
