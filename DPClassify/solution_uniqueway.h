@@ -3,32 +3,28 @@
 #define __SOLUTION_UNIQUE_WAY_H_
 
 #include <vector>
+#include <ISolutionBase.h>
 using namespace std;
 
-//Ò»¸ö»úÆ÷ÈËÎ»ÓÚÒ»¸ö m x n Íø¸ñµÄ×óÉÏ½Ç £¨ÆğÊ¼µãÔÚÏÂÍ¼ÖĞ±ê¼ÇÎª¡°Start¡± £©¡£
+//ä¸€ä¸ªæœºå™¨äººä½äºä¸€ä¸ª m x n ç½‘æ ¼çš„å·¦ä¸Šè§’ ï¼ˆèµ·å§‹ç‚¹åœ¨ä¸‹å›¾ä¸­æ ‡è®°ä¸ºâ€œStartâ€ ï¼‰ã€‚
 //
-//»úÆ÷ÈËÃ¿´ÎÖ»ÄÜÏòÏÂ»òÕßÏòÓÒÒÆ¶¯Ò»²½¡£»úÆ÷ÈËÊÔÍ¼´ïµ½Íø¸ñµÄÓÒÏÂ½Ç£¨ÔÚÏÂÍ¼ÖĞ±ê¼ÇÎª¡°Finish¡±£©¡£
+//æœºå™¨äººæ¯æ¬¡åªèƒ½å‘ä¸‹æˆ–è€…å‘å³ç§»åŠ¨ä¸€æ­¥ã€‚æœºå™¨äººè¯•å›¾è¾¾åˆ°ç½‘æ ¼çš„å³ä¸‹è§’ï¼ˆåœ¨ä¸‹å›¾ä¸­æ ‡è®°ä¸ºâ€œFinishâ€ï¼‰ã€‚
 //
-//ÎÊ×Ü¹²ÓĞ¶àÉÙÌõ²»Í¬µÄÂ·¾¶£¿
+//é—®æ€»å…±æœ‰å¤šå°‘æ¡ä¸åŒçš„è·¯å¾„ï¼Ÿ
 
-class SolutionUniqueWay {
+class SolutionUniqueWay : public ISolutionBase
+{
 public:
-    int uniquePaths(int m, int n) {
+    int uniquePaths(int m, int n) 
+    {
 
-        int (*dp)[][n] = (int (*) [][n])new int[m *n];
 
-
-        delete []dp;
-
-        return 0;
 
     }
 
     void answer()
     {
-        int  path_all = uniquePaths(5,4);
 
-        cout << path_all << endl;
     }
 };
 
