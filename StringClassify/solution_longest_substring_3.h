@@ -5,6 +5,7 @@
 #include <iostream>
 #include <my_types.h>
 #include <ISolutionBase.h>
+using namespace std;
 // 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
 
 // 示例 1:
@@ -36,73 +37,11 @@
 class SolutionLongestSubstring : public ISolutionBase
 {
 public:
-    int lengthOfLongestSubstring(std::string s) {
-        
-        if(s.size() <= 1) return s.size();
-        
-        int sum[256] = {0};
-        
-        int max_len = 0;
-        int tmp = 0;
-        int begin = 0;
-        
-        for(size_t i = 0; i < s.size() ; ++i)
-        {   
-            int idx = s[i];
-            if(sum[idx] == 0)
-            {
-                ++tmp; 
-            }
-            else
-            {
-                int len = sum[idx] - begin ;
+    int lengthOfLongestSubstring(std::string s);
+  
+    int lengthOfLongestSubstringII(std::string s);
 
-                if(tmp > max_len) max_len = tmp;
-
-                for(int j = begin;j < begin + len; ++j)
-                {
-                    int idx_j = s[j];
-                    sum[idx_j] = 0;
-                }
-                tmp -= (len - 1);
-                begin += len; 
-            }
-            sum[idx] = i + 1;
-        }
-        
-        return tmp > max_len ? tmp : max_len;
-    }
-
-    int lengthOfLongestSubstringII(std::string s)
-    {
-
-        if(s.size() <= 1) return s.size();
-        
-        int sum[256] = {0};
-        
-        int max_len = 0;
-
-        int begin = 0;
-        
-        for(int i = 0; i < (int)s.size() ; ++i)
-        {   
-            int idx = s[i];
-            begin = sum[idx] > begin ? sum[idx] : begin;
-
-            max_len = (i - begin + 1) > max_len ? (i - begin + 1) : max_len;
-
-            sum[idx] = i + 1;
-        }
-        
-        return max_len;
-    }
-
-    void answer()
-    {
-        int len = lengthOfLongestSubstring("abcabcbb");
-        std::cout << "max len is " << len << std::endl;
-    }
-
+    void answer();
 };
 
 
