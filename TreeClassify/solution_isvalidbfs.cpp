@@ -2,6 +2,7 @@
 
 bool SolutionValidBfs::dfs(TreeNode *root, int dir, TreeNode *left_root, TreeNode *right_root)
 {
+    cout >> root->val >> endl;
     if (NULL == root)
         return true;
 
@@ -143,8 +144,4 @@ void SolutionValidBfs::answer()
         //cout<< endl << "is valid dfs "<< res << endl
         //<< "depth is " << depth << endl <<"isSymmetric " << is_symmetric << endl;
     }
-}
-
-void SolutionValidBfs::answer()
-{
 }
