@@ -32,6 +32,18 @@ class SolutionMaxValidBracker: public ISolutionBase
  {
 public:
     
+    SolutionMaxValidBracker(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionMaxValidBracker(){}
+
     struct Record_s
     {
         Record_s(int c,int idx):c(c),idx(idx) {}

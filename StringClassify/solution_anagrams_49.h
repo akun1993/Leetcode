@@ -2,7 +2,6 @@
 #ifndef __LEET_ANAGRAMS_H_
 #define __LEET_ANAGRAMS_H_
 
-#include <string>
 #include <iostream>
 #include <algorithm>
 #include <map>
@@ -35,11 +34,20 @@ using namespace std;
 // 解法2：对每个字符串的副本排序，是字母异位的排序后顺序一定相同,并使用map将是字母异位词的存在同一个key中
 // 最后在复制到返回结果
 
-using namespace std;
-
-class SolutionAnagrams : public ISolutioBase
- {
+class SolutionAnagrams:public ISolutionBase
+{
 public:
+    SolutionAnagrams(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionAnagrams(){}
 
     vector<vector<string>> groupAnagrams(vector<string>& strs);
     vector<vector<string>> groupAnagramsII(vector<string>& strs);

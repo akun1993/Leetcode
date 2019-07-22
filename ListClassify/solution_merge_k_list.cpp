@@ -1,6 +1,6 @@
-#include "solution_merger_k_list.h"
-
-ListNode *SolutionList::mergeTwoLists(ListNode *l1, ListNode *l2)
+#include "solution_merge_k_list.h"
+#include <deque>
+ListNode *SolutionMergeKList::mergeTwoLists(ListNode *l1, ListNode *l2)
 {
 
     if (l1 == nullptr)
@@ -58,7 +58,7 @@ ListNode *SolutionList::mergeTwoLists(ListNode *l1, ListNode *l2)
     return head;
 }
 
-ListNode *SolutionList::mergeTwoListsII(ListNode *l1, ListNode *l2)
+ListNode *SolutionMergeKList::mergeTwoListsII(ListNode *l1, ListNode *l2)
 {
 
     if (l1 == nullptr)
@@ -99,7 +99,7 @@ ListNode *SolutionList::mergeTwoListsII(ListNode *l1, ListNode *l2)
     return ret;
 }
 
-ListNode *SolutionList::mergeTwoListsIII(ListNode *l1, ListNode *l2)
+ListNode *SolutionMergeKList::mergeTwoListsIII(ListNode *l1, ListNode *l2)
 {
     if (l1 == nullptr)
         return l2;
@@ -120,7 +120,7 @@ ListNode *SolutionList::mergeTwoListsIII(ListNode *l1, ListNode *l2)
     return head;
 }
 
-ListNode *SolutionList::mergeKLists(vector<ListNode *> &lists)
+ListNode *SolutionMergeKList::mergeKLists(vector<ListNode *> &lists)
 {
     if (lists.empty())
         return nullptr;
@@ -149,7 +149,7 @@ ListNode *SolutionList::mergeKLists(vector<ListNode *> &lists)
     return qu.front();
 }
 
-ListNode *removeNthFromEnd(ListNode *head, int n)
+ListNode *SolutionMergeKList::removeNthFromEnd(ListNode *head, int n)
 {
     if (head == nullptr)
         return head;
@@ -201,7 +201,7 @@ ListNode *removeNthFromEnd(ListNode *head, int n)
     return head;
 }
 
-ListNode *removeNthFromEndII(ListNode *head, int n)
+ListNode *SolutionMergeKList::removeNthFromEndII(ListNode *head, int n)
 {
     if (head == nullptr)
         return nullptr;

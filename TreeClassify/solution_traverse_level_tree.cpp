@@ -6,7 +6,7 @@ void SolutionTraverseLevelTree::TranslevelII(TreeNode *root)
     if (root == NULL)
         return;
 
-    int max_depth = maxDepth(root);
+    int max_depth = TreeNode::maxDepth(root);
 
     int max_cnt = pow(2, max_depth + 1);
 

@@ -2,7 +2,7 @@
 
 bool SolutionValidBfs::dfs(TreeNode *root, int dir, TreeNode *left_root, TreeNode *right_root)
 {
-    cout >> root->val >> endl;
+    //cout >> root->val >> endl;
     if (NULL == root)
         return true;
 
@@ -118,30 +118,7 @@ void SolutionValidBfs::answer()
         vector<int> &tmp = *arr[i];
         TreeNode *head = tree.GenerateTree(tmp);
 
-        tree.TranslevelII(head);
-
-        //bool res = IsValidBfs(head);
-
-        //int depth = tree.maxDepth(head);
-
-        // bool is_symmetric = tree.SymmetricIterator(head);
-        //tree.inorderTraversalII(head);
-        TreeNode *p = tree.FindNodeByVal(head, 1);
-        TreeNode *q = tree.FindNodeByVal(head, 3);
-
-        TreeNode *res = tree.lowestCommonAncestorII(head, p, q);
-        if (res)
-            cout << endl
-                 << "res is " << res->val << endl;
-        else
-            cout << endl
-                 << "res is NULL" << endl;
-
-        tree.flatten(head);
-
-        tree.TranslevelII(head);
-
-        //cout<< endl << "is valid dfs "<< res << endl
-        //<< "depth is " << depth << endl <<"isSymmetric " << is_symmetric << endl;
+        bool res = IsValidBfs(head);
+        cout << "result is " << res << endl;
     }
 }

@@ -2,6 +2,7 @@
 #define _SOLUTION_TRAVERSE_INORDER_TREE_H_
 
 #include <vector>
+#include <stack>
 #include <TreeNode.h>
 #include <ISolutionBase.h>
 
@@ -12,8 +13,17 @@ class SolutionTraverseInorderTree : public ISolutionBase
 private:
     /* data */
 public:
-    SolutionTraverseInorderTree(/* args */){};
-    ~SolutionTraverseInorderTree(){};
+    SolutionTraverseInorderTree(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionTraverseInorderTree(){}
 
     vector<int> inorderTraversal(TreeNode *root);
     vector<int> inorderTraversalII(TreeNode *root);

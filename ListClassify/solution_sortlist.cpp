@@ -1,4 +1,5 @@
 #include "solution_sortlist.h"
+#include <deque>
 
 ListNode *SolutionSortList::merge(ListNode *l1, ListNode *l2)
 {
@@ -126,11 +127,11 @@ ListNode *SolutionSortList::sortListII(ListNode *head)
     }
 
     //int step = 1;
-    for (int step = 1; step < qu.size() / 2; step *= 2)
+    for (int step = 1; step < (int)qu.size() / 2; step *= 2)
     {
         int times = 0;
         int len = 2 * step;
-        while (times + step < qu.size())
+        while (times + step < (int)qu.size())
         {
             mergeII(qu[times], qu[times + step], len);
 

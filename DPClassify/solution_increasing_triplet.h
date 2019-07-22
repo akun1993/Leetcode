@@ -21,6 +21,19 @@ using namespace std;
 class SolutionTriplet : public ISolutionBase
 {
 public:
+
+    SolutionTriplet(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionTriplet(){}
+
     bool increasingTriplet(vector<int>& nums) ;
     void answer();
 

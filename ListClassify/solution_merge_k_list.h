@@ -11,9 +11,20 @@
 
 using namespace std;
 
-class SolutionList : public ISolutionBase
+class SolutionMergeKList : public ISolutionBase
 {
 public:
+    SolutionMergeKList(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionMergeKList(){}
 
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
 

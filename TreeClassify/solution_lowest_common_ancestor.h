@@ -6,9 +6,24 @@
 #include <ISolutionBase.h>
 #include "TreeNode.h"
 
+using namespace std;
+
 class SolutionLowestCommonAncestor : public ISolutionBase
 {
 public:
+
+    SolutionLowestCommonAncestor(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionLowestCommonAncestor(){}
+
     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q);
     TreeNode *lowestCommonAncestorII(TreeNode *root, TreeNode *p, TreeNode *q);
 

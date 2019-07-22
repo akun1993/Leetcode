@@ -1,5 +1,5 @@
 
-INC=-I../include
+INC=-I../Include
 CXXFLAGS += -Wall -std=c++11  -DDEBUG $(INC)
 
 TARGET=build-in.o

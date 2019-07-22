@@ -11,6 +11,18 @@ using namespace std;
 class SolutionValidBfs : public ISolutionBase
 {
 public:
+    SolutionValidBfs(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionValidBfs(){}
+
     enum
     {
         LEFT_LEFT,

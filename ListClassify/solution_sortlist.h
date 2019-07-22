@@ -3,6 +3,7 @@
 
 #include "ListNode.h"
 #include <ISolutionBase.h>
+using namespace std;
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -14,6 +15,18 @@
 class SolutionSortList : public ISolutionBase
 {
 public:
+
+    SolutionSortList(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionSortList(){}
     
     ListNode * merge(ListNode* l1,ListNode* l2);
     

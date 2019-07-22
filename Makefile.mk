@@ -5,7 +5,7 @@ CD=cd
 CP=cp
 AR=ar
 STRIP=strip
-INC=-I./include -I./tool
+INC=-I./Include -I./ModuleBase
 
 TARGET_DIR =./_install
 TARGET   = leet_main
@@ -25,7 +25,11 @@ OPath=$(PRO_DIR)/.obj
 OBJ=$(OPath)/leet_main.o 
 #$(OPath)/version.o 
 
-sub_dirs=$(PRO_DIR)/tool  $(PRO_DIR)/StringClassify 
+sub_dirs=	$(PRO_DIR)/ModuleBase  \
+			$(PRO_DIR)/StringClassify \
+			$(PRO_DIR)/TreeClassify \
+			$(PRO_DIR)/ListClassify \
+			$(PRO_DIR)/DPClassify
 #
 #sub_dirs=$(PRO_DIR)
 #$(PRO_DIR)/ArrayClassify $(PRO_DIR)/DPClassify  $(PRO_DIR)/ListClassify 

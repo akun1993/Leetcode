@@ -26,7 +26,16 @@ using namespace std;
 class SolutionGenerateBracket : public ISolutionBase
 {
 public:
-
+    SolutionGenerateBracket(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ):ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+    }
+    ~SolutionGenerateBracket(){}
     void recursive(string &str,int left,int right,vector<string> &result);
     vector<string> generateParenthesis(int n);
     void answer();

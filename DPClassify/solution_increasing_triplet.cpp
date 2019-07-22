@@ -1,4 +1,4 @@
-#include "solution_increasingTriplet.h"
+#include "solution_increasing_triplet.h"
 
 bool SolutionTriplet::increasingTriplet(vector<int> &nums)
 {

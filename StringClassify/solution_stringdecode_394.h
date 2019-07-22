@@ -30,6 +30,18 @@ using namespace std;
 class SolutionStringDecode :  public ISolutionBase
 {
 public:
+
+    SolutionStringDecode(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionStringDecode(){}
     
     void __decode(string &s,int beg,int &end,int &breaket,string &str);
     

@@ -2,9 +2,7 @@
 
 vector<vector<string>> SolutionAnagrams::groupAnagrams(vector<string> &strs)
 {
-
     vector<vector<string>> res;
-
     if (strs.empty())
         return res;
 
@@ -144,7 +142,7 @@ vector<vector<string>> SolutionAnagrams::groupAnagramsIII(vector<string> &strs)
     map<string, vector<string>> dict;
     vector<vector<string>> res;
     string tmp;
-    for (int i = 0; i < strs.size(); ++i)
+    for (u32 i = 0; i < strs.size(); ++i)
     {
         tmp = strs[i];
         sort(tmp.begin(), tmp.end());

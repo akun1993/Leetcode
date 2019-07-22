@@ -22,10 +22,11 @@ TreeNode *SolutionLowestCommonAncestor::lowestCommonAncestor(TreeNode *root, Tre
         return right;
     }
 
-    if (left == NULL && right != NULL)
+    if (left != NULL && right != NULL)
     {
         return root;
     }
+    return NULL;
 }
 
 TreeNode *SolutionLowestCommonAncestor::lowestCommonAncestorII(TreeNode *root, TreeNode *p, TreeNode *q)
@@ -55,10 +56,10 @@ TreeNode *SolutionLowestCommonAncestor::lowestCommonAncestorII(TreeNode *root, T
             {
                 // cout << node->val << ", ";
 
-                bool res = CheckNodeIsInTree(node, p);
+                bool res = TreeNode::CheckNodeIsInTree(node, p);
 
                 if (res)
-                    res = CheckNodeIsInTree(node, q);
+                    res = TreeNode::CheckNodeIsInTree(node, q);
 
                 if (res)
                 {

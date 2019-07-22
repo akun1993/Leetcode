@@ -23,6 +23,18 @@ using namespace std;
 class SolutionPalindrome: public ISolutionBase
 {
 public:
+    SolutionPalindrome(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionPalindrome(){}
+
     string longestPalindrome(string s);
     void answer();
 

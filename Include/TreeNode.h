@@ -11,7 +11,7 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 
-    int maxDepth(TreeNode *root)
+    static int maxDepth(TreeNode *root)
     {
         if (root == nullptr)
             return 0;
@@ -22,10 +22,10 @@ struct TreeNode {
         return depth_left > depth_right ? depth_left : depth_right;
     }
 
-    TreeNode *GenerateTree(std::vector<int> &val_list)
+    static TreeNode *GenerateTree(std::vector<int> &val_list)
     {
         if (val_list.empty() || val_list[0] == 0)
-            return NULL;
+            return nullptr;
 
         TreeNode *head = new TreeNode(0);
 
@@ -66,10 +66,10 @@ struct TreeNode {
         }
         return head;
     }
-    TreeNode *FindNodeByVal(TreeNode *root, int val)
+    static TreeNode *FindNodeByVal(TreeNode *root, int val)
     {
-        if (root == NULL)
-            return NULL;
+        if (root == nullptr)
+            return nullptr;
         if (root->val == val)
             return root;
 
@@ -81,10 +81,10 @@ struct TreeNode {
         return res;
     }
 
-    bool CheckNodeIsInTree(TreeNode *root, TreeNode *node)
+    static bool CheckNodeIsInTree(TreeNode *root, TreeNode *node)
     {
-        if (root == NULL)
-            return NULL;
+        if (root == nullptr)
+            return nullptr;
         if (root == node)
             return true;
 

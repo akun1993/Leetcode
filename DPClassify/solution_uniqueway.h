@@ -15,17 +15,22 @@ using namespace std;
 class SolutionUniqueWay : public ISolutionBase
 {
 public:
-    int uniquePaths(int m, int n) 
+
+    SolutionUniqueWay(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
     {
-
-
-
+      
     }
+    ~SolutionUniqueWay(){}
 
-    void answer()
-    {
+    int uniquePaths(int m, int n);
 
-    }
+    void answer();
 };
 
 #endif // __SOLUTION_UNIQUE_WAY_H_

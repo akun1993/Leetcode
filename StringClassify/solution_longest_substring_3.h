@@ -37,6 +37,19 @@ using namespace std;
 class SolutionLongestSubstring : public ISolutionBase
 {
 public:
+
+    SolutionLongestSubstring(
+        const char *name,
+        const char * problem_desc,
+        int number,
+        ISolutionBase::Difficulty lv,
+        unsigned int flag
+    ): ISolutionBase(name,problem_desc,number,lv,flag)
+    {
+      
+    }
+    ~SolutionLongestSubstring(){}
+
     int lengthOfLongestSubstring(std::string s);
   
     int lengthOfLongestSubstringII(std::string s);
