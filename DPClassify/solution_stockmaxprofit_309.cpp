@@ -1,4 +1,5 @@
-#include "solution_stockmaxprofit.h"
+#include "solution_stockmaxprofit_309.h"
+#include <iostream>
 
 void SolutionStockMaxProfit::__profit(vector<int> &prices, int idx, int buy_price, int status, int cur_profit, vector<int> &memo, int &max_profit)
 {

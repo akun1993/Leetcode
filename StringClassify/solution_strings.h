@@ -13,7 +13,6 @@ public:
     static SolutionStrings &GetInstance()
     {
         static SolutionStrings instance;
-        string_exist.answer();
         return instance;
     }
     ~SolutionStrings();

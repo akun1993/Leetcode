@@ -2,9 +2,11 @@
 #define __SOLUTION_MAXAREA_H_
 
 #include <vector>
+#include <ISolution.h>
 using namespace std;
 
-class SolutionMaxArea{
+class SolutionMaxArea : public ISolution
+{
 public:
     int maxArea(vector<int>& height) {
 

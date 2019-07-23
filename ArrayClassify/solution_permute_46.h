@@ -2,11 +2,12 @@
 #define __SOLUTION_PERMUTE_H_
 
 #include <vector>
+#include <ISolution.h>
 using namespace std;
 
 //����һ��û���ظ����ֵ����У����������п��ܵ�ȫ���С�
 
-class SolutionPermuteII
+class SolutionPermuteII : public ISolution
 {
   public:
     vector<vector<int>> permute(vector<int>& nums) {

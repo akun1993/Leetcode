@@ -1,5 +1,5 @@
 #include "solution_generatebracket_22.h"
-
+#include <iostream>
 void SolutionGenerateBracket::recursive(string &str, int left, int right, vector<string> &result)
 {
     if (left == 0)

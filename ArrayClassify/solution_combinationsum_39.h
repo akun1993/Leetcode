@@ -2,7 +2,11 @@
 #ifndef __SOLUTION_COMBINATION_SUM_H_
 #define __SOLUTION_COMBINATION_SUM_H_
 
-class SolutionCombinbationSum {
+#include <ISolution.h>
+using namespace std;
+
+class SolutionCombinbationSum : public ISolution
+{
 public:
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) 
     {

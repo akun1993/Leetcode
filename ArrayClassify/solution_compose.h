@@ -2,10 +2,11 @@
 #define SOLUTION_COMPOSE_H_INCLUDED
 
 #include <vector>
-#include "my_types.h"
+#include <ISolution.h>
+using namespace std;
 
 using namespace std;
-class SolutionPermute
+class SolutionPermute : public ISolution
 {
     public:
         vector<vector<int> >  permute(int n,int m)

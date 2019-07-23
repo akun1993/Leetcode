@@ -1,5 +1,5 @@
 
-#include "solution_flatten_tree.h"
+#include "solution_flatten_tree_114.h"
 
 void SolutionFlatten::flatten(TreeNode *root)
 {

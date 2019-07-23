@@ -12,7 +12,7 @@ TARGET   = leet_main
 
 CXXFLAGS += -Wall -std=c++11 -DDEBUG $(INC)
 
-LDFLAGS += -luuid -lrt 
+LDFLAGS += 
 
 ifeq (,$(PRO_DIR))
 PRO_DIR =$(shell pwd)

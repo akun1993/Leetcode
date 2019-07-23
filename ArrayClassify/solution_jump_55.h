@@ -4,6 +4,7 @@
 #include <vector>
 #include <deque>
 #include "my_types.h"
+#include <ISolution.h>
 using namespace std;
 
 //����һ���Ǹ��������飬�����λ������ĵ�һ��λ�á�
@@ -23,7 +24,7 @@ using namespace std;
 //���: false
 //����: �������������ܻᵽ������Ϊ 3 ��λ�á�����λ�õ������Ծ������ 0 �� ��������Զ�����ܵ������һ��λ�á�
 
-class SolutionJump
+class SolutionJump : public ISolution
 {
 public:
     bool jump(vector<int> &nums)

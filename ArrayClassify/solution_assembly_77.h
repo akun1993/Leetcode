@@ -2,8 +2,10 @@
 #define SOLUTION_ASSEMBLY_H_INCLUDED
 
 #include <vector>
+#include <ISolution.h>
 using namespace std;
-class SolutionAessembly
+
+class SolutionAessembly : public ISolution
 {
     public:
         vector<vector<int> >  permute(int n,int m)

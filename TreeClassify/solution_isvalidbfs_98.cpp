@@ -1,4 +1,5 @@
-#include "solution_isvalidbfs.h"
+#include "solution_isvalidbfs_98.h"
+#include <iostream>
 
 bool SolutionValidBfs::dfs(TreeNode *root, int dir, TreeNode *left_root, TreeNode *right_root)
 {

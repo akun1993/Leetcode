@@ -1,7 +1,11 @@
 #ifndef __SOLUTION_DIVIDE_H_
 #define __SOLUTION_DIVIDE_H_
 
-class SolutionDivide {
+#include <ISolution.h>
+using namespace std;
+
+class SolutionDivide : public ISolution
+{
 public:
     int divide(int dividend, int divisor) {
         

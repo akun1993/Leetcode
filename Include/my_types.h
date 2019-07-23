@@ -1,6 +1,6 @@
 #ifndef __MY_TYPES_H__
 #define __MY_TYPES_H__
-
+#include <stddef.h>
 #define SYS_64_BIT
 //#define SYS_32_BIT
 

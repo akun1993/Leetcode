@@ -1,4 +1,4 @@
-#include "solution_symmetric_tree.h"
+#include "solution_symmetric_tree_101.h"
 
 bool SolutionSymmertic::__Symmetric(TreeNode *lnode, TreeNode *rnode)
 {

@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-
+#include <ISolution.h>
 using namespace std;
 
 
@@ -18,7 +18,7 @@ using namespace std;
 // 来源：力扣（LeetCode）
 
 
-class SolutionMergeArray
+class SolutionMergeArray : public ISolution
 {
 public:
 

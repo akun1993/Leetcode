@@ -2,10 +2,12 @@
 #define __SOLUTION_ALL_SUBSETS_H_
 
 #include <vector>
+#include <ISolution.h>
+using namespace std;
 // 给定一组不含重复元素的整数数组 nums，返回该数组所有可能的子集（幂集）。
 
 // 说明：解集不能包含重复的子集。
-class SolutionAllSubsets
+class SolutionAllSubsets : public ISolution
 {
 public:
     //位运算，先计算集合的总数 为total 包含了空集， 而 [0 - total) 的非零bit 位的位置，就是数字在所给数组中的位置 

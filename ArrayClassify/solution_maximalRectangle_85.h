@@ -3,8 +3,11 @@
 #define __MAXIMAL_RECTANGLE_H_
 
 #include <vector>
+#include <ISolution.h>
+using namespace std;
 
-class SolutionMaximalRectangle {
+class SolutionMaximalRectangle : public ISolution
+{
 public:
     int maximalRectangle(vector<vector<char>>& matrix)
      {

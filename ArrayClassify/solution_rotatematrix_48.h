@@ -2,8 +2,10 @@
 #define __SOLUTION_ROTATE_MATRIX_H_
 
 #include <vector>
+#include <ISolution.h>
+using namespace std;
 
-class SolutionRotateMatrix
+class SolutionRotateMatrix : public ISolution
 {
 public:
     void rotate(vector<vector<int>>& matrix) 

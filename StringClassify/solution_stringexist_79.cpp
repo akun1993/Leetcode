@@ -2,13 +2,7 @@
 
 using namespace std;
 
-static const char *problem_desc =
-"给定的字符串是否在字符数组的一个序列\n"
-"例如 {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};\n"
-"可以看作是 'A','B','C','E','S','F','C','S','A','D','E','E'\n"
-"其中\"ABCCED\" 是上面序列的一个子序列\n"
-"解法： 使用深度优先搜索，并使用visit 数组记录是否被搜索过\n"
-;
+
 
 
 bool SolutionStringExist::dfs(vector<vector<char>>& board,string &word,int idx,int x,int y,vector<vector<bool>> &visit)
@@ -83,6 +77,4 @@ void SolutionStringExist::answer()
         cout << "flag " << flag  << endl;            
     }   
 }
-
-SolutionStringExist string_exist("string",problem_desc,79,ISolutionBase::NORMAL_LV,0);
 

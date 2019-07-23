@@ -1,5 +1,5 @@
 
-#include "solution_invert_tree.h"
+#include "solution_invert_tree_226.h"
 
 TreeNode *SolutionInvertTree::invertTreeI(TreeNode *root)
 {

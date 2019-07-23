@@ -4,8 +4,10 @@
 //整币兑零
 
 #include <vector>
+#include <ISolution.h>
+using namespace std;
 
-class SolutionChangeMoney
+class SolutionChangeMoney : public ISolution
 {
     public:
     

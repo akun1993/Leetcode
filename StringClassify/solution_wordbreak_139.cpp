@@ -1,4 +1,6 @@
 #include "solution_wordbreak_139.h"
+#include <iostream>
+
 
 bool SolutionWordBreak::dfs(string &s, int idx, map<string, int> &dict, int str_len_min, vector<int> &memo)
 {
