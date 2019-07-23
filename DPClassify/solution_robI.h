@@ -3,23 +3,14 @@
 
 #include <iostream>
 #include <vector>
-#include <ISolutionBase.h>
+#include <ISolution>
 #include "my_types.h"
 using namespace std;
 
 class SolutionRob : public ISolutionBase
 {
 public:
-    SolutionRob(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionRob(){}
     ~SolutionRob(){}
     void gap_rob(int beg,vector<int>& nums,int &cur_money,int &max_money);
 

@@ -3,24 +3,14 @@
 
 #include <vector>
 #include "my_types.h"
-#include <ISolutionBase.h>
+#include <ISolution.h>
 #include "TreeNode.h"
 using namespace std;
 
-
-class SolutionFlatten : public ISolutionBase
+class SolutionFlatten : public ISolution
 {
 public:
-    SolutionFlatten(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionFlatten(){}
     ~SolutionFlatten(){}
     void flatten(TreeNode *root);
 

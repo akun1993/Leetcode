@@ -3,6 +3,7 @@
 
 #include <memory.h>
 #include <iostream>
+#include "ISolution.h"
 
 class ISolutionBase
 {

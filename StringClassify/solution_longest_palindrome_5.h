@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 #include <my_types.h>
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 
 //      给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
@@ -20,19 +20,11 @@ using namespace std;
 //     链接：https : //leetcode-cn.com/problems/longest-palindromic-substring
 //     著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-class SolutionPalindrome: public ISolutionBase
+class SolutionPalindrome : public ISolution
 {
 public:
-    SolutionPalindrome(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionPalindrome(){}
+
     ~SolutionPalindrome(){}
 
     string longestPalindrome(string s);

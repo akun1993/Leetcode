@@ -1,27 +1,18 @@
 #ifndef _SOLUTION_TRAVERSE_LEVEL_TREE_H_
 #define _SOLUTION_TRAVERSE_LEVEL_TREE_H_
 
-#include <ISolutionBase.h>
+#include <ISolution.h>
 #include <TreeNode.h>
 #include <math.h>
 using namespace std;
 
-class SolutionTraverseLevelTree : public ISolutionBase
+class SolutionTraverseLevelTree : public ISolution
 {
 private:
     /* data */
 public:
 
-    SolutionTraverseLevelTree(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionTraverseLevelTree(){}
     ~SolutionTraverseLevelTree(){}
 
     struct Record_s

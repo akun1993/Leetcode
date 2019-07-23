@@ -6,22 +6,12 @@
 #include <vector>
 #include <string>
 #include <my_types.h>
-#include "ISolutionBase.h"
+#include "ISolution.h"
 
-
-class SolutionStringExist: public ISolutionBase
+class SolutionStringExist : public ISolution
 {
 public:
-    SolutionStringExist(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionStringExist(){}
     ~SolutionStringExist(){}
 
     bool exist(std::vector<std::vector<char>>& board, std::string word);

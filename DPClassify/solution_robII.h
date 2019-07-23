@@ -6,22 +6,13 @@
 #include <map>
 #include <stdlib.h>
 #include <time.h>
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 
-class SolutionRobII : public ISolutionBase
+class SolutionRobII : public ISolution
 {
 public:
-    SolutionRobII(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionRobII(){}
     ~SolutionRobII(){}
     int rob(vector<int>& nums);
 

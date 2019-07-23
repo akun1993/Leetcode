@@ -6,7 +6,7 @@
 #include <iostream>
 #include <vector>
 #include "my_types.h"
-#include <ISolutionBase.h>
+#include <ISolution.h>
 
 using namespace std;
 
@@ -18,20 +18,11 @@ using namespace std;
 // 使得 arr[i] < arr[j] < arr[k] ，返回 true ; 否则返回 false 。
 // 说明: 要求算法的时间复杂度为 O(n)，空间复杂度为 O(1) 。
 
-class SolutionTriplet : public ISolutionBase
+class SolutionTriplet : public ISolution
 {
 public:
 
-    SolutionTriplet(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionTriplet(){}
     ~SolutionTriplet(){}
 
     bool increasingTriplet(vector<int>& nums) ;

@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 #include <my_types.h>
-#include <ISolutionBase.h>
+#include <ISolution.h>
 
 using namespace std;
 // 给定一个只包含 '(' 和 ')' 的字符串，找出最长的包含有效括号的子串的长度。
@@ -28,20 +28,11 @@ using namespace std;
 // 括号的问题最常用的解法就是使用栈来解决。这里是寻找最长的包含有效括号的子串的长度
 // 所以就是统计每个子串的有效长度。
 
-class SolutionMaxValidBracker: public ISolutionBase
- {
+class SolutionMaxValidBracker : public ISolution
+{
 public:
     
-    SolutionMaxValidBracker(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionMaxValidBracker(){}
     ~SolutionMaxValidBracker(){}
 
     struct Record_s

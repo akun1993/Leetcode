@@ -2,23 +2,15 @@
 #define __SOLUTION_FINDCYCLE_INDEX_
 
 #include "ListNode.h"
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 
-class SolutionFindCycleIndex : public ISolutionBase
+class SolutionFindCycleIndex : public ISolution
 {
 public:
 
-    SolutionFindCycleIndex(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionFindCycleIndex(){}
+
     ~SolutionFindCycleIndex(){}
 
     ListNode*FindCycle(ListNode* head);

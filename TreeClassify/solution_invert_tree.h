@@ -3,7 +3,7 @@
 
 #include "TreeNode.h"
 #include <deque>
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 
 /* 翻转一棵二叉树。
@@ -25,20 +25,11 @@ using namespace std;
   / \   / \
  9   6 3   1
 */
-class SolutionInvertTree : public ISolutionBase
+class SolutionInvertTree : public ISolution
 {
 public:
 
-    SolutionInvertTree(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionInvertTree(){}
     ~SolutionInvertTree(){}
 
     TreeNode* invertTreeI(TreeNode* root) ;

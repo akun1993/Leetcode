@@ -2,7 +2,7 @@
 #define __SOLUTION_SORT_LIST_H_
 
 #include "ListNode.h"
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 /**
  * Definition for singly-linked list.
@@ -12,20 +12,12 @@ using namespace std;
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class SolutionSortList : public ISolutionBase
+class SolutionSortList : public ISolution
 {
 public:
 
-    SolutionSortList(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionSortList(){}
+
     ~SolutionSortList(){}
     
     ListNode * merge(ListNode* l1,ListNode* l2);

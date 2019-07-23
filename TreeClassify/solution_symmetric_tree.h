@@ -3,25 +3,16 @@
 #define __SOLUTION_SYMMERTIC_TREE_H_
 
 #include "my_types.h"
-#include <ISolutionBase.h>
+#include <ISolution.h>
 #include "TreeNode.h"
 
 using namespace std;
 
-class SolutionSymmertic : public ISolutionBase
+class SolutionSymmertic : public ISolution
 {
 public:
     
-    SolutionSymmertic(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionSymmertic(){}
     ~SolutionSymmertic(){}
 
     bool isSymmetric(TreeNode *root);

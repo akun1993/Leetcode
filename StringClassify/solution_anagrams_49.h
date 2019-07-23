@@ -9,7 +9,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <my_types.h>
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 
 // 给定一个字符串数组，将字母异位词组合在一起。字母异位词指字母相同，但排列不同的字符串。
@@ -34,19 +34,10 @@ using namespace std;
 // 解法2：对每个字符串的副本排序，是字母异位的排序后顺序一定相同,并使用map将是字母异位词的存在同一个key中
 // 最后在复制到返回结果
 
-class SolutionAnagrams:public ISolutionBase
+class SolutionAnagrams : public ISolution
 {
 public:
-    SolutionAnagrams(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionAnagrams( ){}
     ~SolutionAnagrams(){}
 
     vector<vector<string>> groupAnagrams(vector<string>& strs);

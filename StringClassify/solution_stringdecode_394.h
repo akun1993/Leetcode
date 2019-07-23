@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include <my_types.h>
-#include <ISolutionBase.h>
+#include <ISolution.h>
 using namespace std;
 // 给定一个经过编码的字符串，返回它解码后的字符串。
 
@@ -25,22 +25,13 @@ using namespace std;
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 //解法 ：使用递归， 本题解码同样涉及到括号匹配的问题，解码时最主要的是注意嵌套，也就是 '[' 开始 和 ']' 结束，必须对应匹配
-// 其内部嵌套的'['']' 
+// 其内部嵌套的'['']'
 
-class SolutionStringDecode :  public ISolutionBase
+class SolutionStringDecode : public ISolution
 {
 public:
 
-    SolutionStringDecode(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionStringDecode(){}
     ~SolutionStringDecode(){}
     
     void __decode(string &s,int beg,int &end,int &breaket,string &str);

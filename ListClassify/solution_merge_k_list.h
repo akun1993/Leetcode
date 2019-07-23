@@ -7,23 +7,14 @@
 #include <vector>
 #include <deque>
 #include "ListNode.h"
-#include <ISolutionBase.h>
+#include <ISolution.h>
 
 using namespace std;
 
-class SolutionMergeKList : public ISolutionBase
+class SolutionMergeKList : public ISolution
 {
 public:
-    SolutionMergeKList(
-        const char *name,
-        const char * problem_desc,
-        int number,
-        ISolutionBase::Difficulty lv,
-        unsigned int flag
-    ): ISolutionBase(name,problem_desc,number,lv,flag)
-    {
-      
-    }
+    SolutionMergeKList(){}
     ~SolutionMergeKList(){}
 
     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2);
