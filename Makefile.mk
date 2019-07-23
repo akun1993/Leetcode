@@ -87,9 +87,9 @@ clean_obj:
 	$(RM) -f $(OBJ) >& /dev/null
 
 export CC
-export RM=rm
-export MV=mv
-export CD=cd
-export CP=cp
-export AR=ar
-export STRIP=strip
+export RM
+export MV
+export CD
+export CP
+export AR
+export STRIP
