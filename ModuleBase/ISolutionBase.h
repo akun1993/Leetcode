@@ -17,23 +17,27 @@ public:
         COUNT_LV,
     };
     ISolutionBase(
-        const char * name,
-        const char * problem_desc,
+        const char *name,
+        const char *problem_desc,
         int number,
         Difficulty lv,
-        unsigned int flag
-    ): name(name), problem_desc(problem_desc), number(number), level(lv), flags(flag) 
+        unsigned int flag,
+        ISolution &solution) : name(name), problem_desc(problem_desc), number(number), level(lv), flags(flag), solution(solution)
     {
 
     }
+    virtual ~ISolutionBase() {}
+
     virtual void problemInfo()
     {
         std::cout << level << " " << name <<" " << problem_desc << std::endl;
     }
 
-    virtual ~ISolutionBase() {}
-
-    virtual void answer() = 0;
+    
+    void answer()
+    {
+        solution.answer();
+    }
 
 private:
     static const int MAX_SOLUTION = 3;
@@ -42,8 +46,8 @@ private:
     const char * problem_desc;
     int          number;
     Difficulty   level;
-    unsigned int flags;    
-
+    unsigned int flags;
+    ISolution    &solution;
 };
 
 #endif

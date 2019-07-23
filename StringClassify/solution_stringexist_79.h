@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 #include <my_types.h>
-#include "ISolution.h"
+#include <ISolution.h>
 
 class SolutionStringExist : public ISolution
 {

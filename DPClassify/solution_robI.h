@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <vector>
-#include <ISolution>
 #include "my_types.h"
+#include <ISolution.h>
 using namespace std;
 
-class SolutionRob : public ISolutionBase
+class SolutionRob : public ISolution
 {
 public:
     SolutionRob(){}

@@ -5,8 +5,8 @@ class ISolution
 {
 public:
     ISolution(){}
-    ~ISolution(){}
+    virtual ~ISolution(){}
     virtual void answer() = 0;
-}
+};
 
 #endif
