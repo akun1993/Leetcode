@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 class SolutionRotateMatrix : public ISolution

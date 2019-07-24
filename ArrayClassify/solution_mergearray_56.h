@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 

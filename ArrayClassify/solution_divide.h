@@ -2,6 +2,7 @@
 #define __SOLUTION_DIVIDE_H_
 
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 class SolutionDivide : public ISolution

@@ -3,6 +3,7 @@
 #define __SOLUTION_COMBINATION_SUM_H_
 
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 class SolutionCombinbationSum : public ISolution

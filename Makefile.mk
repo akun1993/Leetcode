@@ -29,7 +29,8 @@ sub_dirs=	$(PRO_DIR)/ModuleBase  \
 			$(PRO_DIR)/StringClassify \
 			$(PRO_DIR)/TreeClassify \
 			$(PRO_DIR)/ListClassify \
-			$(PRO_DIR)/DPClassify
+			$(PRO_DIR)/DPClassify \
+			$(PRO_DIR)/ArrayClassify
 #
 #sub_dirs=$(PRO_DIR)
 #$(PRO_DIR)/ArrayClassify $(PRO_DIR)/DPClassify  $(PRO_DIR)/ListClassify 

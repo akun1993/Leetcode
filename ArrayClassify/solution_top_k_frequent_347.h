@@ -5,6 +5,7 @@
 #include <map>
 #include <unordered_map>
 #include <algorithm>
+#include <iostream>
 #include "my_types.h"
 #include <ISolution.h>
 using namespace std;

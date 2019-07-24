@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 using namespace std;
@@ -38,7 +39,7 @@ class SolutionPermute : public ISolution
 
                 if (flag && i == m - 1)
                 {
-                    //���һ�����
+                  
                     for (int j = 0; j < m; j++)
                     {
                         cout << arr[j];

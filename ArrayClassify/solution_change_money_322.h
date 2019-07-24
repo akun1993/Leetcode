@@ -5,6 +5,7 @@
 
 #include <vector>
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 class SolutionChangeMoney : public ISolution

@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <ISolution.h>
+#include <iostream>
 using namespace std;
 
 class SolutionMaximalRectangle : public ISolution
@@ -11,8 +12,6 @@ class SolutionMaximalRectangle : public ISolution
 public:
     int maximalRectangle(vector<vector<char>>& matrix)
      {
-        
-        
         vector<vector<int> > vals(matrix.size(),vector<int> (matrix[0].size(),0));
         int max_area = 0;
         for(size_t i = 0; i < matrix.size(); ++i)

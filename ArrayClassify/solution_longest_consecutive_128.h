@@ -2,6 +2,7 @@
 #define __SOLUTION_LONGEST_CONSECUTIVE_H_
 
 #include <ISolution.h>
+#include <vector>
 using namespace std;
 
 // 输入: [100, 4, 200, 1, 3, 2]
