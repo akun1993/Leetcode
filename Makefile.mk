@@ -19,26 +19,24 @@ PRO_DIR =$(shell pwd)
 endif
 
 #Out file path
-OPath=$(PRO_DIR)/.obj
+OPATH=$(PRO_DIR)/.obj
 
 # all object files.
-OBJ=$(OPath)/leet_main.o 
+OBJ=$(OPATH)/leet_main.o 
 #$(OPath)/version.o 
 
 sub_dirs=	$(PRO_DIR)/ModuleBase  \
-			$(PRO_DIR)/StringClassify \
-			$(PRO_DIR)/TreeClassify \
-			$(PRO_DIR)/ListClassify \
-			$(PRO_DIR)/DPClassify \
-			$(PRO_DIR)/ArrayClassify
+			$(PRO_DIR)/StringTopics \
+			$(PRO_DIR)/TreeTopics \
+			$(PRO_DIR)/ListTopics \
+			$(PRO_DIR)/DynamicPTopics \
+			$(PRO_DIR)/ArrayTopics
 #
 #sub_dirs=$(PRO_DIR)
-#$(PRO_DIR)/ArrayClassify $(PRO_DIR)/DPClassify  $(PRO_DIR)/ListClassify 
- #$(PRO_DIR)/TreeClassify  
 LIBS=
 LIBS=$(shell libs=;for subdir in $(sub_dirs);do libs+="$$subdir/build-in.o ";done;echo $$libs;)
 
-all:start $(TARGET_DIR) $(OPath) $(OBJ) sub-dirs end
+all:start $(TARGET_DIR) $(OPATH) $(OBJ) sub-dirs end
 	$(CC) -o $(TARGET) -Xlinker "-(" $(OBJ) $(LIBS) -Xlinker "-)" $(LDFLAGS)
 
 #
@@ -53,10 +51,10 @@ end:
 $(TARGET_DIR):
 	mkdir $(TARGET_DIR) 2> /dev/null
 
-$(OPath):
-	mkdir $(OPath) 2> /dev/null
+$(OPATH):
+	mkdir $(OPATH) 2> /dev/null
 
-$(OPath)/%.o: %.cpp
+$(OPATH)/%.o: %.cpp
 	$(CC) $(CXXFLAGS) -c -o $@ $<
 
 sub-dirs:
@@ -71,7 +69,7 @@ sub-dirs:
 	done
 
 clean:
-	$(RM) -rf $(OPath) >& /dev/null
+	$(RM) -rf $(OPATH) >& /dev/null
 	$(RM) -f $(TARGET) >& /dev/null
 	$(RM) -rf $(TARGET_DIR) >& /dev/null
 

@@ -1,18 +1,17 @@
-#include "ISolutionModule.h"
-
+#include "ITopicsModule.h"
 #include <iostream>
 
-ISolutionModule::ISolutionModule(/* args */)
+ITopicsModule::ITopicsModule(/* args */)
 {
 
 }
 
-ISolutionModule::~ISolutionModule()
+ITopicsModule::~ITopicsModule()
 {
 
 }
 
-void ISolutionModule::ShowAllSolutions()
+void ITopicsModule::ShowAllSolutions()
 {
     int cnt = 1;
     for (auto &info : solutions)
@@ -22,7 +21,7 @@ void ISolutionModule::ShowAllSolutions()
     }
     
 }
-void ISolutionModule::ShowAnswer(int idx)
+void ITopicsModule::ShowAnswer(int idx)
 {
     if(idx < 0 || idx >=  (int) solutions.size())
     {
@@ -32,7 +31,7 @@ void ISolutionModule::ShowAnswer(int idx)
     solutions[idx]->answer();
 }
 
-void ISolutionModule::RegisterSoulution(ISolutionBase *solution)
+void ITopicsModule::RegisterSoulution(ISolutionBase *solution)
 {
     if(solution) solutions.push_back(solution);
 }

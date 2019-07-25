@@ -1,16 +1,16 @@
-#ifndef _I_SOLUTION_MODULE_H_
-#define _I_SOLUTION_MODULE_H_
+#ifndef _I_TOPICS_MODULE_H_
+#define _I_TOPICS_MODULE_H_
 
 #include <vector>
 #include "ISolutionBase.h"
 
-class ISolutionModule
+class ITopicsModule
 {
 private:
     std::vector<ISolutionBase *> solutions;
 public:
-    ISolutionModule(/* args */);
-    virtual ~ISolutionModule();
+    ITopicsModule(/* args */);
+    virtual ~ITopicsModule();
 
     void ShowAnswer(int idx);
 
