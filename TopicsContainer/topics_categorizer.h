@@ -21,7 +21,7 @@ private:
     };
     ITopicsModule *topics[TOPICS_COUNT];
 private:
-    void SolutionDistribute(ISolutionBase *solution,u32 flag);
+    void SolutionDistribute(ISolutionBase *solution, int count, ...);
     void InitTopics();
 public:
     TopicsCatergorizer(/* args */);

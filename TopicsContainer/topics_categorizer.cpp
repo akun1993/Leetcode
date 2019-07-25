@@ -1,11 +1,13 @@
 #include "topics_categorizer.h"
 #include <memory.h>
+#include <stdarg.h>
+#include <iostream>
 #include "topics_array.h"
 #include "topics_dynamic.h"
 #include "topics_list.h"
 #include "topics_strings.h"
 #include "topics_tree.h"
-#include <iostream>
+
 using namespace std;
 
 TopicsCatergorizer::TopicsCatergorizer()
@@ -51,13 +53,25 @@ void TopicsContainer::RegisterTopics(ITopicsModule &topics_module,int topics_typ
 
 
 
-void TopicsContainer::SolutionDistribute(ISolutionBase *solution,u32 )
+void TopicsContainer::SolutionDistribute(ISolutionBase *solution,int count,...)
 {
     if(solution == nullptr) return;
 
-    topics[idx].RegisterSoulution(solution);
+    va_list args;
 
+    va_start(args, count);
+
+    for (size_t i = 0; i < count; i++)
+    {
+        /* code */
+        unsigned int idx = va_arg(args, unsigned int);
+
+        if (idx < TOPICS_COUNT)
+        {
+            topics[idx].RegisterSoulution(solution);
+        }
+    }
+    va_end(args);
 }
-
 
 
