@@ -1,6 +1,6 @@
 
 INC=-I../Include -I../ModuleBase
-CXXFLAGS += -Wall -std=c++11 -DDEBUG $(INC)
+CXXFLAGS += -Wall -std=c++11  -DDEBUG $(INC)
 
 TARGET=build-in.o
 SUBDIRS:=
@@ -9,12 +9,9 @@ ifeq (,$(PRO_DIR))
 PRO_DIR =$(shell pwd)
 endif
 
-OPATH=$(PRO_DIR)
+OPATH=$(PRO_DIR)/.obj
 
 OBJ= $(addprefix $(OPATH)/,$(patsubst %.cpp,%.o,$(wildcard *.cpp)))
-
-#heads= $(wildcard *.h)
-#$(warning $(heads))
 
 LIB=$(shell  libs=; for subdir in $(SUBDIRS); do libs+=$$(subdir)/build-in.o; done; echo $$libs)
 
@@ -29,6 +26,7 @@ $(OPATH)/%.o: %.cpp
 
 clean:
 	$(RM) -f $(OPATH)/*.o >& /dev/null;
+	$(RM) -f ./*.o >& /dev/null;
 
 	@for subdir in $(SUBDIRS);\
 	do\

@@ -1,11 +1,9 @@
 #include <string>
 #include <iostream>
-#include "StringClassify/solution_strings.h"
 
 static  const char * leetcode = 
 "           *********************************\n" 
 "           ************LEETCODE*************\n"
-"           ***********Author ZKun***********\n"
 "           ********Study And Practice*******\n"
 "           **********Version 1.0.0**********\n"
 "           ****题目来源:力扣(LeetCode)*******\n"
@@ -22,8 +20,6 @@ int main(int argc,const char **argv)
 
     PrintStartInfo();
 
-    SolutionStrings &str = SolutionStrings::GetInstance();
-    str.ShowAnswer(0);
 
      return 0;
 

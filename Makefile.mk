@@ -30,7 +30,8 @@ sub_dirs=	$(PRO_DIR)/ModuleBase  \
 			$(PRO_DIR)/TreeTopics \
 			$(PRO_DIR)/ListTopics \
 			$(PRO_DIR)/DynamicPTopics \
-			$(PRO_DIR)/ArrayTopics
+			$(PRO_DIR)/ArrayTopics \
+			$(PRO_DIR)/TopicsContainer
 #
 #sub_dirs=$(PRO_DIR)
 LIBS=

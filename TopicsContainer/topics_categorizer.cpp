@@ -1,4 +1,5 @@
 #include "topics_categorizer.h"
+#include <ITopicsModule.h>
 #include <memory.h>
 #include <stdarg.h>
 #include <iostream>
@@ -16,7 +17,7 @@ TopicsCatergorizer::TopicsCatergorizer()
     InitTopics();
 }
 
-void TopicsContainer::InitTopics()
+void TopicsCatergorizer::InitTopics()
 {
     ITopicsModule &topics_string = static_cast<ITopicsModule &> (TopicsStrings::GetInstance());
     RegisterTopics(topics_string,STRING_TOPICS);
@@ -27,7 +28,7 @@ void TopicsContainer::InitTopics()
     ITopicsModule &topics_tree = static_cast<ITopicsModule &> (TopicsTree::GetInstance());
     RegisterTopics(topics_tree,TREE_TOPICS);
 
-    TopicsModule &topics_array = static_cast<ITopicsModule &> (TopicsArray::GetInstance());
+    ITopicsModule &topics_array = static_cast<ITopicsModule &> (TopicsArray::GetInstance());
     RegisterTopics(topics_array,ARRAY_TOPICS);
 
     ITopicsModule &dynamic= static_cast<ITopicsModule &> (TopicsDynamic::GetInstance());
@@ -35,7 +36,7 @@ void TopicsContainer::InitTopics()
 
 }
 
-void TopicsContainer::RegisterTopics(ITopicsModule &topics_module,int topics_type)
+void TopicsCatergorizer::RegisterTopics(ITopicsModule &topics_module,int topics_type)
 {
     if(topics_type < 0 || topics_type >= TOPICS_COUNT)
     {
@@ -53,7 +54,7 @@ void TopicsContainer::RegisterTopics(ITopicsModule &topics_module,int topics_typ
 
 
 
-void TopicsContainer::SolutionDistribute(ISolutionBase *solution,int count,...)
+void TopicsCatergorizer::SolutionDistribute(ISolutionBase *solution,int count,...)
 {
     if(solution == nullptr) return;
 
@@ -61,14 +62,14 @@ void TopicsContainer::SolutionDistribute(ISolutionBase *solution,int count,...)
 
     va_start(args, count);
 
-    for (size_t i = 0; i < count; i++)
+    for (int i = 0; i < count; i++)
     {
         /* code */
         unsigned int idx = va_arg(args, unsigned int);
 
         if (idx < TOPICS_COUNT)
         {
-            topics[idx].RegisterSoulution(solution);
+            topics[idx]->RegisterSoulution(solution);
         }
     }
     va_end(args);

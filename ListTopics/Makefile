@@ -13,6 +13,9 @@ OPATH=$(PRO_DIR)/.obj
 
 OBJ= $(addprefix $(OPATH)/,$(patsubst %.cpp,%.o,$(wildcard *.cpp)))
 
+#heads= $(wildcard *.h)
+#$(warning $(heads))
+
 LIB=$(shell  libs=; for subdir in $(SUBDIRS); do libs+=$$(subdir)/build-in.o; done; echo $$libs)
 
 all: $(OPATH) $(OBJ)

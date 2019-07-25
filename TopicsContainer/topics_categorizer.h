@@ -4,6 +4,7 @@
 #include <my_types.h>
 
 class ITopicsModule;
+class ISolutionBase;
 
 class TopicsCatergorizer
 {
@@ -21,11 +22,14 @@ private:
     };
     ITopicsModule *topics[TOPICS_COUNT];
 private:
-    void SolutionDistribute(ISolutionBase *solution, int count, ...);
+    void RegisterTopics(ITopicsModule &topics_module,int topics_type);
+   
     void InitTopics();
 public:
     TopicsCatergorizer(/* args */);
     ~TopicsCatergorizer(){}
+    void SolutionDistribute(ISolutionBase *solution, int count, ...);
+    
 };
 
 
