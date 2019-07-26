@@ -1,2 +1,13 @@
 # Leetcode
-algorithm Leetcode
+
+题目源自：https://leetcode-cn.com/problems/
+
+目标：
+算法学习、项目学习
+
+计划:
+    1、目前题目信息是在代码中的，计划使用数据库对题目信息数据进行存储。
+    2、测试案列目前是代码中写死的，计划通过json格式的文件读入。
+
+
+
