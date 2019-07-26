@@ -11,7 +11,6 @@ class SolutionMatrixSetZeros : public ISolution
 {
 public:
 
- 
     //将矩阵中为0 的元素的所在行所在列的元素也值为零，只能操作原始矩阵中的0元素
     void setZeroes(vector<vector<int>>& matrix) 
     {
@@ -58,7 +57,12 @@ public:
         }
     }
 
-}
+    void answer()
+    {
+
+    }
+
+};
 
 
 #endif

@@ -1,5 +1,8 @@
 #include <string>
 #include <iostream>
+#include <memory>
+#include <utility.h>
+#include "topics_categorizer.h"
 
 static  const char * leetcode = 
 "           *********************************\n" 
@@ -20,8 +23,11 @@ int main(int argc,const char **argv)
 
     PrintStartInfo();
 
+    std::shared_ptr<TopicsCatergorizer> topics = std::make_shared<TopicsCatergorizer>();
+    topics->ShowAllTopics();
+    topics->Loop();
 
-     return 0;
+    return 0;
 
 }
 

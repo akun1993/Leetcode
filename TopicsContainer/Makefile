@@ -1,6 +1,6 @@
 
-INC=-I../Include -I../ModuleBase
 CXXFLAGS += -Wall -std=c++11  -DDEBUG $(INC)
+#$(warning $(INC))
 
 TARGET=build-in.o
 SUBDIRS:=
@@ -22,7 +22,7 @@ $(OPATH):
 	mkdir $(OPATH) 2> /dev/null
 
 $(OPATH)/%.o: %.cpp
-	$(CC) $(CXXFLAGS) -c -o $@ $<
+	$(CC) $(CXXFLAGS)  -c -o $@ $<
 
 clean:
 	$(RM) -f $(OPATH)/*.o >& /dev/null;

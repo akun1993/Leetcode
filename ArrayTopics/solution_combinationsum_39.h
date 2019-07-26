@@ -6,6 +6,14 @@
 #include <iostream>
 using namespace std;
 
+// 给定一个无重复元素的数组 candidates 和一个目标数 target ，找出 candidates 中所有可以使数字和为 target 的组合。
+
+// candidates 中的数字可以无限制重复被选取。
+
+// 来源：力扣（LeetCode）
+// 链接：https://leetcode-cn.com/problems/combination-sum
+// 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
 class SolutionCombinbationSum : public ISolution
 {
 public:
@@ -19,7 +27,7 @@ public:
 
         vector<int> nums(cand_cnt,0);
         
-        for(size_t i = 0; i < cand_cnt;++i)
+        for(int i = 0; i < cand_cnt;++i)
         {
             int idx = 0;
             nums[0] = 0;
@@ -39,12 +47,12 @@ public:
                 if(sum + candidates[nums[idx]] > target) break;
                 if(flag && idx == i && target == sum + candidates[nums[idx]])
                 {
-                    for (size_t j = 0; j <= i; j++)
+                    vector<int> new_res;
+                    for (int j = 0; j <= i; j++)
                     {
-                        /* code */
-                        cout << nums[j] << " ";
-                    }
-                    cout << endl;
+                        new_res.push_back(candidates[nums[j]]);
+                    } 
+                    res.push_back(new_res);
                 }
 
                 if(idx < i)
@@ -58,7 +66,6 @@ public:
                 {
                     --i;
                 }
-
                 if(idx < 0)
                     break;
                 else
@@ -66,9 +73,13 @@ public:
             }    
         }
         
+        return res;
     }
 
+    void answer()
+    {
 
+    }
 
 };
 

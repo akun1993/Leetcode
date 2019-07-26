@@ -1,5 +1,5 @@
 
-INC=-I../Include -I../ModuleBase
+#INC=-I../Include -I../ModuleBase
 CXXFLAGS += -Wall -std=c++11 -DDEBUG $(INC)
 
 TARGET=build-in.o

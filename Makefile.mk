@@ -5,7 +5,6 @@ CD=cd
 CP=cp
 AR=ar
 STRIP=strip
-INC=-I./Include -I./ModuleBase
 
 TARGET_DIR =./_install
 TARGET   = leet_main
@@ -14,9 +13,15 @@ CXXFLAGS += -Wall -std=c++11 -DDEBUG $(INC)
 
 LDFLAGS += 
 
+
 ifeq (,$(PRO_DIR))
 PRO_DIR =$(shell pwd)
 endif
+
+INC=-I$(PRO_DIR)/Include -I$(PRO_DIR)/Utility -I$(PRO_DIR)/ModuleBase \
+		-I$(PRO_DIR)/TreeTopics -I$(PRO_DIR)/TopicsContainer \
+		-I$(PRO_DIR)/StringTopics -I$(PRO_DIR)/ListTopics \
+		-I$(PRO_DIR)/DynamicPTopics -I$(PRO_DIR)/ArrayTopics 
 
 #Out file path
 OPATH=$(PRO_DIR)/.obj
@@ -31,7 +36,8 @@ sub_dirs=	$(PRO_DIR)/ModuleBase  \
 			$(PRO_DIR)/ListTopics \
 			$(PRO_DIR)/DynamicPTopics \
 			$(PRO_DIR)/ArrayTopics \
-			$(PRO_DIR)/TopicsContainer
+			$(PRO_DIR)/TopicsContainer \
+			$(PRO_DIR)/Utility
 #
 #sub_dirs=$(PRO_DIR)
 LIBS=
@@ -93,3 +99,4 @@ export CD
 export CP
 export AR
 export STRIP
+export INC

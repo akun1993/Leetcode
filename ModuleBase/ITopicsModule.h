@@ -12,7 +12,11 @@ public:
     ITopicsModule(/* args */);
     virtual ~ITopicsModule();
 
-    void ShowAnswer(int idx);
+    virtual void ShowAnswer(int idx);
+
+    virtual void ShowHelper();
+
+    virtual void Loop();
 
     virtual void ShowAllSolutions();
 
