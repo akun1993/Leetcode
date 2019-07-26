@@ -84,9 +84,9 @@ struct TreeNode {
     static bool CheckNodeIsInTree(TreeNode *root, TreeNode *node)
     {
         if (root == nullptr)
-            return nullptr;
+            return false;
         if (root == node)
-            return true;
+            return false;
 
         bool res = CheckNodeIsInTree(root->left, node);
 
