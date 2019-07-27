@@ -78,7 +78,7 @@ void ITopicsModule::ShowAnswer(int idx)
     solutions[idx]->answer();
 }
 
-void ITopicsModule::RegisterSoulution(ISolutionBase *solution)
+void ITopicsModule::RegisterSoulution(ISolutionItem *solution)
 {
     if(solution) solutions.push_back(solution);
 }

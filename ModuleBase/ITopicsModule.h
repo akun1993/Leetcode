@@ -2,12 +2,12 @@
 #define _I_TOPICS_MODULE_H_
 
 #include <vector>
-#include "ISolutionBase.h"
+#include "ISolutionItem.h"
 
 class ITopicsModule
 {
 private:
-    std::vector<ISolutionBase *> solutions;
+    std::vector<ISolutionItem *> solutions;
 public:
     ITopicsModule(/* args */);
     virtual ~ITopicsModule();
@@ -20,7 +20,7 @@ public:
 
     virtual void ShowAllSolutions();
 
-    virtual void RegisterSoulution(ISolutionBase *solution);
+    virtual void RegisterSoulution(ISolutionItem *solution);
 };
 
 #endif

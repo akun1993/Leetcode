@@ -5,7 +5,7 @@
 #include <string>
 
 class ITopicsModule;
-class ISolutionBase;
+class ISolutionItem;
 
 class TopicsCatergorizer
 {
@@ -43,7 +43,7 @@ public:
     void InitSolutions();
     void Loop( );
 
-    void SolutionDistribute(ISolutionBase *solution, int count, ...);
+    void SolutionDistribute(ISolutionItem *solution, int count, ...);
     
 };
 

@@ -18,10 +18,15 @@ ifeq (,$(PRO_DIR))
 PRO_DIR =$(shell pwd)
 endif
 
-INC=-I$(PRO_DIR)/Include -I$(PRO_DIR)/Utility -I$(PRO_DIR)/ModuleBase \
-		-I$(PRO_DIR)/TreeTopics -I$(PRO_DIR)/TopicsContainer \
-		-I$(PRO_DIR)/StringTopics -I$(PRO_DIR)/ListTopics \
-		-I$(PRO_DIR)/DynamicPTopics -I$(PRO_DIR)/ArrayTopics 
+INC= -I$(PRO_DIR)/Include \
+	-I$(PRO_DIR)/Utility \
+	-I$(PRO_DIR)/ModuleBase \
+	-I$(PRO_DIR)/TreeTopics \
+	-I$(PRO_DIR)/TopicsContainer \
+	-I$(PRO_DIR)/StringTopics \
+	-I$(PRO_DIR)/ListTopics \
+	-I$(PRO_DIR)/DynamicPTopics \
+	-I$(PRO_DIR)/ArrayTopics 
 
 #Out file path
 OPATH=$(PRO_DIR)/.obj

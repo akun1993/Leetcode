@@ -116,11 +116,11 @@ void TopicsCatergorizer::Loop( )
 
 void TopicsCatergorizer::InitSolutions()
 {
-
+   // SolutionWordBreak *Solution = 
 
 }
 
-void TopicsCatergorizer::SolutionDistribute(ISolutionBase *solution,int count,...)
+void TopicsCatergorizer::SolutionDistribute(ISolutionItem *solution,int count,...)
 {
     if(solution == nullptr) return;
 
